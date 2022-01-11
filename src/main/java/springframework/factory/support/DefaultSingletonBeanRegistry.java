@@ -1,20 +1,19 @@
 package springframework.factory.support;
 
+
 import springframework.factory.config.SingletonBeanRegistry;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 获取单例对象
- * 主要实现 getSingleton 方法，
- * 同时实现了一个受保护的 addSingleton 方法，这个方法可以被继承
+ * 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
+ * 公众号：bugstack虫洞栈
+ * Create by 小傅哥(fustack)
  */
-
-
 public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
 
-    private final Map<String, Object> singletonObjects = new HashMap<>();
+    private Map<String, Object> singletonObjects = new HashMap<>();
 
     @Override
     public Object getSingleton(String beanName) {

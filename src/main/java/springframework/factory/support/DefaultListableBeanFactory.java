@@ -7,13 +7,12 @@ import springframework.factory.config.BeanDefinition;
 import java.util.HashMap;
 import java.util.Map;
 
-
 /**
- * DefaultListableBeanFactory 在 Spring 源码中是一个非常核心的类
+
  */
 public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFactory implements BeanDefinitionRegistry {
 
-    private final Map<String, BeanDefinition> beanDefinitionMap = new HashMap<>();
+    private Map<String, BeanDefinition> beanDefinitionMap = new HashMap<>();
 
     @Override
     public void registerBeanDefinition(String beanName, BeanDefinition beanDefinition) {

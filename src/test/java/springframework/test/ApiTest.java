@@ -29,9 +29,11 @@ public class ApiTest {
         // 2.注册 bean
         BeanDefinition beanDefinition = new BeanDefinition(UserService.class);
         beanFactory.registerBeanDefinition("userService", beanDefinition);
-        // 3.第一次获取 bean
-        UserService userService = (UserService) beanFactory.getBean("userService");
+
+        // 3 bean获取和调用。测试验证单例对象的是否正确的存放到了缓存中
+        UserService userService = (UserService) beanFactory.getBean("userService", "xpengkang");
         userService.queryUserInfo();
+
         // 4.第二次获取 bean from Singleton
         UserService userService_singleton = (UserService) beanFactory.getBean("userService");
         userService_singleton.queryUserInfo();

@@ -23,4 +23,8 @@ public interface  BeanFactory {
     Object getBean(String name) throws BeansException;
 
 
+    // 加一个
+    Object getBean(String name, Object... args) throws BeansException;
+
+
 }
